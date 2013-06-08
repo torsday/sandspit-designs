@@ -5,8 +5,10 @@ class CreateInitialDb < ActiveRecord::Migration
     create_table :apps do |t|
       t.string :name, :null => false
       t.text :description, :null => false
-      t.string :app_store_url, :null => false
+      t.string :store_url, :null => false
       t.string :main_photo_url, :null => false
+      t.string :color_background, :null => false
+      t.string :color_text, :null => false
     end
 
     create_table :sample_photos do |t|
