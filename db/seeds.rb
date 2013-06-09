@@ -47,8 +47,8 @@ store_url = "http://itunes.apple.com/au/app/clark-county-paramedic/id515196084?l
 
 main_photo_url = "http://i.imgur.com/M9nbRxb.png"
 
-color_background = "1d1e1a"
-color_text = "a0bd9c"
+color_background = "252822"
+color_text = "359aa3"
 
 photos = [
   "http://i.imgur.com/hovq0uP.png",
@@ -81,8 +81,8 @@ store_url = "http://itunes.apple.com/us/app/dopamine/id507713523?ls=1&mt=8"
 
 main_photo_url = "http://i.imgur.com/K5Caak8.png"
 
-color_background = "3d5363"
-color_text = "e5b088"
+color_background = "476677"
+color_text = "f2bd98"
 
 photos = [
   "http://i.imgur.com/oCF04U5.png",
@@ -111,8 +111,8 @@ store_url = "http://itunes.apple.com/us/app/fentanyl/id505754539?ls=1&mt=8"
 
 main_photo_url = "http://i.imgur.com/wHVaHYk.jpg"
 
-color_background = "e2bf85"
-color_text = "3d7397"
+color_background = "e4c78b"
+color_text = "3a86a9"
 
 photos = [
   "http://i.imgur.com/zYJijJL.png",
@@ -142,8 +142,8 @@ store_url = "http://itunes.apple.com/us/app/rts/id505920345?ls=1&mt=8"
 
 main_photo_url = "http://i.imgur.com/r6pnk0j.png"
 
-color_background = "ad0002"
-color_text = "bbbc00"
+color_background = "cf0100"
+color_text = "c4ca00"
 
 photos = [
   "http://i.imgur.com/UEwRCkX.png",
@@ -168,8 +168,8 @@ store_url = "http://itunes.apple.com/us/app/apgar-pro/id506563388?ls=1&mt=8"
 
 main_photo_url = "http://i.imgur.com/m7p2GY1.png"
 
-color_background = "77b899"
-color_text = "9e4a2a"
+color_background = "73c7a9"
+color_text = "bd5532"
 
 photos = [
   "http://i.imgur.com/7fC92uM.png",
