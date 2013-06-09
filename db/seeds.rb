@@ -109,9 +109,9 @@ eos
 
 store_url = "http://itunes.apple.com/us/app/fentanyl/id505754539?ls=1&mt=8"
 
-main_photo_url = "http://i.imgur.com/wHVaHYk.jpg"
+main_photo_url = "http://i.imgur.com/cnWWVAc.png"
 
-color_background = "e4c78b"
+color_background = "ffc77b"
 color_text = "3a86a9"
 
 photos = [
