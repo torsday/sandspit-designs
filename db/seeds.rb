@@ -8,6 +8,8 @@ blocks << lambda do
 
   # Clark County Paramedic
 
+  id = 1
+
   name = "Clark County Paramedic"
 
   description = <<-eos
@@ -45,14 +47,16 @@ blocks << lambda do
     "http://i.imgur.com/cbqMYLH.png"
   ]
 
-  add_app(name, description, store_url, main_photo_url, color_background, color_text)
-  add_sample_photos(1, photos)
+  add_app(id, name, description, store_url, main_photo_url, color_background, color_text)
+  add_sample_photos(id, photos)
 
 end
 
+# Dopamine
+
 blocks << lambda do
 
-  # Dopamine
+  id = 2
 
   name = "Dopamine"
 
@@ -80,14 +84,16 @@ blocks << lambda do
     "http://i.imgur.com/SIo7Om4.png"
   ]
 
-  add_app(name, description, store_url, main_photo_url, color_background, color_text)
-  add_sample_photos(2, photos)
+  add_app(id, name, description, store_url, main_photo_url, color_background, color_text)
+  add_sample_photos(id, photos)
 
 end
 
+# Fentanyl
+
 blocks << lambda do
 
-  # Fentanyl
+  id = 3
 
   name = "Fentanyl App"
 
@@ -112,14 +118,16 @@ blocks << lambda do
     "http://i.imgur.com/j7NOASp.png"
   ]
 
-  add_app(name, description, store_url, main_photo_url, color_background, color_text)
-  add_sample_photos(3, photos)
+  add_app(id, name, description, store_url, main_photo_url, color_background, color_text)
+  add_sample_photos(id, photos)
 
 end
 
+# Revised Trauma Score
+
 blocks << lambda do
 
-  # Revised Trauma Score
+  id = 4
 
   name = "Revised Trauma Score"
 
@@ -145,14 +153,16 @@ blocks << lambda do
     "http://i.imgur.com/rYgGwPf.png"
   ]
 
-  add_app(name, description, store_url, main_photo_url, color_background, color_text)
-  add_sample_photos(4, photos)
+  add_app(id, name, description, store_url, main_photo_url, color_background, color_text)
+  add_sample_photos(id, photos)
 
 end
 
+# APGAR Pro
+
 blocks << lambda do
 
-  # APGAR Pro
+  id = 5
 
   name = "APGAR Pro"
 
@@ -173,8 +183,8 @@ blocks << lambda do
     "http://i.imgur.com/hdd0chL.png"
   ]
 
-  add_app(name, description, store_url, main_photo_url, color_background, color_text)
-  add_sample_photos(5, photos)
+  add_app(id, name, description, store_url, main_photo_url, color_background, color_text)
+  add_sample_photos(id, photos)
 
 end
 
@@ -182,10 +192,10 @@ end
 
 # Helper Methods
 
-def add_app name, description, store_url, main_photo_url, color_background, color_text
+def add_app id, name, description, store_url, main_photo_url, color_background, color_text
   sql_statement = "
-    INSERT INTO apps (name, description, store_url, main_photo_url, color_background, color_text)
-    VALUES ('#{name}', '#{description}', '#{store_url}', '#{main_photo_url}', '#{color_background}', '#{color_text}');
+    INSERT INTO apps (id, name, description, store_url, main_photo_url, color_background, color_text)
+    VALUES (#{id}, '#{name}', '#{description}', '#{store_url}', '#{main_photo_url}', '#{color_background}', '#{color_text}');
   "
   ActiveRecord::Base.connection.execute(sql_statement)
 end
