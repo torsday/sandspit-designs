@@ -202,7 +202,7 @@ end
 def insert table, record
   ActiveRecord::Base.connection.insert(
     "INSERT INTO #{quote_table table}
-      (#{record.keys.map(&method(:quote_col)).join(',')})
+      (#{record.keys.map { |key| quote_col key }.join(',')})
       VALUES
       (#{record.values.map(&method(:quote_val)).join(',')})"
   )
