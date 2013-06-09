@@ -4,9 +4,9 @@
 
 blocks = []
 
-blocks << lambda do
+# Clark County Paramedic
 
-  # Clark County Paramedic
+blocks << lambda do
 
   id = 1
 
