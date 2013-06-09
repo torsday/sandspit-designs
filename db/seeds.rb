@@ -1,5 +1,7 @@
 # Populate the database with sample data
 
+require 'hashr'
+
 # ---
 
 blocks = []
@@ -8,11 +10,13 @@ blocks = []
 
 blocks << lambda do
 
-  id = 1
+  app = Hashr.new
 
-  name = "Clark County Paramedic"
+  app.id = 1
 
-  description = <<-eos
+  app.name = "Clark County Paramedic"
+
+  app.description = <<-eos
     Clark County Paramedic is an app designed to increase the quality and safety of patient care as well as the experience of the paramedic.
 
     How it works:
@@ -33,12 +37,14 @@ blocks << lambda do
     Disclaimer: This app is meant to aid in patient care as a means to provide redundancy. Always use your own judgment with treatment.
   eos
 
-  store_url = "http://itunes.apple.com/au/app/clark-county-paramedic/id515196084?ls=1&mt=8"
+  app.store_url = "http://itunes.apple.com/au/app/clark-county-paramedic/id515196084?ls=1&mt=8"
 
-  main_photo_url = "http://i.imgur.com/M9nbRxb.png"
+  app.main_photo_url = "http://i.imgur.com/M9nbRxb.png"
 
-  color_background = "1d1e1a"
-  color_text = "a0bd9c"
+  app.color_background = "1d1e1a"
+  app.color_text = "a0bd9c"
+
+  insert 'apps', app
 
   photos = [
     "http://i.imgur.com/hovq0uP.png",
@@ -47,8 +53,9 @@ blocks << lambda do
     "http://i.imgur.com/cbqMYLH.png"
   ]
 
-  add_app(id, name, description, store_url, main_photo_url, color_background, color_text)
-  add_sample_photos(id, photos)
+  photos.each do |photo_url|
+    insert 'sample_photos', :app_id => app.id, :url => photo_url
+  end
 
 end
 
@@ -191,6 +198,29 @@ end
 # ---
 
 # Helper Methods
+
+def insert table, record
+  ActiveRecord::Base.connection.insert(
+    "INSERT INTO #{quote_table table}
+      (#{record.keys.map(&method(:quote_col)).join(',')})
+      VALUES
+      (#{record.values.map(&method(:quote_val)).join(',')})"
+  )
+end
+
+def quote_table arg
+  ActiveRecord::Base.connection.quote_table_name arg
+end
+
+def quote_val arg
+  ActiveRecord::Base.connection.quote arg
+end
+
+def quote_col arg
+  ActiveRecord::Base.connection.quote_column_name arg
+end
+
+# Todo: Remove these
 
 def add_app id, name, description, store_url, main_photo_url, color_background, color_text
   sql_statement = "
