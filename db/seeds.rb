@@ -53,8 +53,8 @@ color_text = "359aa3"
 photos = [
   "http://i.imgur.com/hovq0uP.png",
   "http://i.imgur.com/rg9k8WU.png",
-  "http://i.imgur.com/0jnfRny.png",
-  "http://i.imgur.com/cbqMYLH.png"
+  "http://i.imgur.com/0jnfRny.png"#,
+  # "http://i.imgur.com/cbqMYLH.png"
 ]
 
 add_app(name, description, store_url, main_photo_url, color_background, color_text)
@@ -143,7 +143,7 @@ store_url = "http://itunes.apple.com/us/app/rts/id505920345?ls=1&mt=8"
 main_photo_url = "http://i.imgur.com/r6pnk0j.png"
 
 color_background = "cf0100"
-color_text = "c4ca00"
+color_text = "f8fe45"
 
 photos = [
   "http://i.imgur.com/UEwRCkX.png",
