@@ -1,0 +1,62 @@
+
+.indiv_app {
+  float: left;
+  width: 20%;
+  .app_name {
+  }
+  .app_main_img {
+    width: 100%;
+    img {
+      width: 100%;
+      height: 100%;
+    }
+  }
+}
+
+.app_descriptives {
+  position: relative;
+  // float:left;
+  width: 80%;
+  margin: 0 auto 0 auto;
+  .descriptive_box {
+    float: left;
+    .app_title {
+      h1 {
+        float: left;
+        display: inline-block;
+        font-family: "Dosis", sans-serif;
+      }
+    }
+    .app_store_url {
+      position: relative;
+      margin: 32px 0 32px 0;
+      float: right;
+      left: 512px;
+      img {
+        width: 15%;
+      }
+    }
+    .app_description {
+      clear: both;
+      p {
+        font-family: "Helvetica-light", sans-serif;
+      }
+    }
+    .app_sample_photos {
+      margin: 5% auto 5% auto;
+
+      .sample_photo {
+        img {
+          float: left;
+          width: 26%;
+          margin: 0 2% 0 2%;
+        }
+      }
+    }
+  }
+}
+
+.hide_me {
+  display: none;
+}
+

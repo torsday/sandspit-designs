@@ -112,7 +112,7 @@ store_url = "http://itunes.apple.com/us/app/fentanyl/id505754539?ls=1&mt=8"
 main_photo_url = "http://i.imgur.com/cnWWVAc.png"
 
 color_background = "ffc77b"
-color_text = "3a86a9"
+color_text = "2c6782"
 
 photos = [
   "http://i.imgur.com/zYJijJL.png",
@@ -169,7 +169,7 @@ store_url = "http://itunes.apple.com/us/app/apgar-pro/id506563388?ls=1&mt=8"
 main_photo_url = "http://i.imgur.com/m7p2GY1.png"
 
 color_background = "73c7a9"
-color_text = "bd5532"
+color_text = "863d24"
 
 photos = [
   "http://i.imgur.com/7fC92uM.png",

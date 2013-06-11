@@ -1,0 +1,19 @@
+.app_bar
+  - @apps.each do |app|
+    .indiv_app{:app_id => app.id, :background_color => app.color_background, :text_color => app.color_text}
+      .app_main_img
+        =image_tag app.main_photo_url
+
+.app_descriptives
+  - @apps.each do |app|
+    .descriptive_box{:hidden => true, :app_id => app.id}
+      .app_title
+        %h1=app.name
+      .app_description
+        %p=app.description
+      .app_sample_photos
+        - app.sample_photos.each do |photo|
+          .sample_photo
+            =image_tag photo.url
+      .app_store_url
+        = link_to image_tag('http://i.imgur.com/PCmLA1p.png'), app.store_url
