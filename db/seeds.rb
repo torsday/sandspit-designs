@@ -51,10 +51,9 @@ color_background = "252822"
 color_text = "359aa3"
 
 photos = [
-  "http://i.imgur.com/hovq0uP.png",
-  "http://i.imgur.com/rg9k8WU.png",
-  "http://i.imgur.com/0jnfRny.png"#,
-  # "http://i.imgur.com/cbqMYLH.png"
+  "http://i.imgur.com/5sBDevB.png",
+  "http://i.imgur.com/LvXideu.png",
+  "http://i.imgur.com/ptV2YvM.png"
 ]
 
 add_app(name, description, store_url, main_photo_url, color_background, color_text)
@@ -115,9 +114,9 @@ color_background = "ffc77b"
 color_text = "2c6782"
 
 photos = [
-  "http://i.imgur.com/zYJijJL.png",
-  "http://i.imgur.com/vtsZCe4.png",
-  "http://i.imgur.com/j7NOASp.png"
+  "http://i.imgur.com/AX56BRG.png",
+  "http://i.imgur.com/QBQTGwo.png",
+  "http://i.imgur.com/XJKg6gI.png"
 ]
 
 add_app(name, description, store_url, main_photo_url, color_background, color_text)
