@@ -1,5 +1,6 @@
 $(document).ready(function() {
   $('.indiv_app').fadeTo(10, 0.5);
+  $('html').css('background-color', '#252822');
 
   $('.indiv_app').on('mouseover', function(){
 
